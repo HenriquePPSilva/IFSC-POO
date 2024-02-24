@@ -1,5 +1,5 @@
-###Instruções para programar em Java
-##Compilando código:
+### Instruções para programar em Java
+## Compilando código:
 ```
 javac 'nome do arquivo'.java
 ```
