@@ -7,8 +7,9 @@ public class ExercicioDisciplina {
             double nota1 = Double.parseDouble(args[0]);
             double nota2 = Double.parseDouble(args[1]);
             double nota3 = Double.parseDouble(args[2]);
-            cf = (((((nota1 * 2) + (nota2 * 3))/ 2 + 3) * 0.9) + nota3 * 0.1);
-            System.out.println("A média do aluno foi de: " + cf);
+            cf = (((nota1 * 2 + (nota2 * 3)) / (2 + 3)) * 0.9 + nota3 * 0.1);
+            //Estou arredondando o valor com o Math.round(), pois fica feio 6,933333334.
+            System.out.println("A média do aluno foi de: " + Math.round(cf));
             if(cf >= 6){
                 System.out.println("Parabéns, sua média foi suficiente para passar!");
             }else{
