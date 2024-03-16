@@ -5,6 +5,14 @@ public class Pessoa {
     private String email;
     private String cpf;
 
+
+    public Pessoa(String nome, String email, String cpf) {
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+    }
+
+
     @Override
     public String toString() {
         return  "nome='" + nome + '\'' +

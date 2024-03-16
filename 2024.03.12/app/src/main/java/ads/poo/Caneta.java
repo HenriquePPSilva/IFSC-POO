@@ -1,9 +1,27 @@
 package ads.poo;
 
 public class Caneta {
-    private String cor = "Preta";
-    private int tinta = 100;
+    private String cor;
+    private int tinta;
 
+
+    public Caneta(String cor, int tinta) {
+        this.cor = cor;
+        this.tinta = tinta;
+    }
+
+    public Caneta(String cor){
+//        this.tinta = 100;
+//        this.cor = cor;
+        this(cor, 100);
+    }
+
+
+    public Caneta() {
+//        this.tinta = 100;   É MAU CHEIROSO ISSO POIS REPETE CODIGO
+//        this.cor = "Vermelha";
+        this("Vermelho", 100);
+    }
 
     public String getCor() {
         return cor;

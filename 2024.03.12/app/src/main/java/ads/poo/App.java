@@ -21,12 +21,16 @@ public class App {
 //
 //        canetaPreta.setCor("Verde");
 //        System.out.println(canetaPreta.getCor());
-        Pessoa pessoa = new Pessoa();
+//        Pessoa pessoa = new Pessoa("Juca", "123.456.789.30", "juca@example.org");
+//
+//        System.out.println(pessoa);
+//
+//        Caneta bic = new Caneta(100, "azul");
+//
+//        Caneta pilot = new Caneta("preta");
 
-        pessoa.setCpf("123.456.789.30");
-        pessoa.setNome("Juca");
-        pessoa.setEmail("juca@example.org");
-
-        System.out.println(pessoa);
+        Carro carrao = new Carro(190);
+        carrao.acelerar(30);
+        System.out.println(carrao);
     }
 }
