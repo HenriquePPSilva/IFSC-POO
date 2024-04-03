@@ -66,13 +66,26 @@ public class Horario {
     public String toString() {
         return horas + ":" + minutos + ":" + segundos;
     }
+    public String imprimirPorExtenso(){
+        String imprimeHorasPorExtenso = converterNumeroParaExtenso(horas)  +  " horas";
+        String imprimeMinutosPorExtenso = converterNumeroParaExtenso(minutos) + " minutos";
+        String imprimeSegundosPorExtenso = converterNumeroParaExtenso(segundos) + " segundos";
+        return imprimeHorasPorExtenso + ", " +  imprimeMinutosPorExtenso + " e " + imprimeSegundosPorExtenso;
+    }
 
-    public String imprimeHorarioExtenso(int horas){
+    public String converterNumeroParaExtenso(int horas){
         String[] he = {"zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"};
         String[] ms = {"vinte", "trinta", "quarenta", "cinquenta"};
-        int dezena = horas / 10;
-        int unidade = horas % 10;
-        return "";
+        if(horas < 20){
+            return he[horas];
+        }else{
+            int dezena = horas / 10;
+            int unidade = horas % 10;
+            return ms[dezena - 2] + " e " + he[unidade];
+        }
+    }
+    public int retornarHorarioEmSegundos(){
+        return (horas * 3600) + (minutos * 60) + segundos;
     }
 
 }
