@@ -37,6 +37,8 @@ public class Horario {
         this.horas = horas;
         if(horas < 0 || horas > 23){
             this.horas = 0;
+            this.minutos = 0;
+            this.segundos = 0;
         }
     }
 
@@ -44,7 +46,9 @@ public class Horario {
     public void setMinutos(int minutos) {
         this.minutos = minutos;
         if(minutos < 0 || minutos > 59){
+            this.horas = 0;
             this.minutos = 0;
+            this.segundos = 0;
         }
     }
 
@@ -52,6 +56,8 @@ public class Horario {
     public void setSegundos(int segundos) {
         this.segundos = segundos;
         if(segundos < 0  || segundos > 59){
+            this.horas = 0;
+            this.minutos = 0;
             this.segundos = 0;
         }
     }
@@ -61,8 +67,11 @@ public class Horario {
         return horas + ":" + minutos + ":" + segundos;
     }
 
-    public String imprimeHorarioExtenso(){
-        String[] he = {};
+    public String imprimeHorarioExtenso(int horas){
+        String[] he = {"zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"};
+        String[] ms = {"vinte", "trinta", "quarenta", "cinquenta"};
+        int dezena = horas / 10;
+        int unidade = horas % 10;
         return "";
     }
 
