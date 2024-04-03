@@ -5,7 +5,7 @@ package ads.poo;
 
 public class App {
     public static void main(String[] args) {
-        Horario relogio = new Horario(23,24,24);
+        Horario relogio = new Horario(388,2,2);
 
 
         System.out.println("Horas: " + relogio);

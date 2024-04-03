@@ -15,26 +15,21 @@ public class Horario {
         setSegundos(segundos);
     }
     public Horario(int horas, int minutos){
-        this.horas = horas;
-        this.minutos = minutos;
+        this(horas, minutos, 0);
         setHoras(horas);
         setMinutos(minutos);
-        this.segundos = 0;
     }
 
     public Horario(int horas){
-        this.horas = horas;
+        this(horas, 0, 0);
         setHoras(horas);
     }
     public Horario() {
-        this.horas = 0;
-        this.minutos = 0;
-        this.segundos = 0;
+        this(0,0,0);
     }
 
 
     public void setHoras(int horas) {
-        this.horas = horas;
         if(horas < 0 || horas > 23){
             this.horas = 0;
             this.minutos = 0;
@@ -44,7 +39,6 @@ public class Horario {
 
 
     public void setMinutos(int minutos) {
-        this.minutos = minutos;
         if(minutos < 0 || minutos > 59){
             this.horas = 0;
             this.minutos = 0;
@@ -54,8 +48,7 @@ public class Horario {
 
 
     public void setSegundos(int segundos) {
-        this.segundos = segundos;
-        if(segundos < 0  || segundos > 59){
+        if(segundos < 0 || segundos > 59){
             this.horas = 0;
             this.minutos = 0;
             this.segundos = 0;
