@@ -6,8 +6,6 @@ package ads.poo;
 public class App {
     public static void main(String[] args) {
         Horario relogio = new Horario(388,2,2);
-
-
         System.out.println("Horas: " + relogio);
         System.out.println(relogio.imprimirPorExtenso());
         System.out.println(relogio.retornarHorarioEmSegundos());
