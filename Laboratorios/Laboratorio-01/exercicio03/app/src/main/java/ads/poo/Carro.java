@@ -1,19 +1,25 @@
 package ads.poo;
 
-public class Carro {
-    private final int identificador = 0;
-    private int objetosCriados = 0;
-    private int velocidade;
+import java.util.Random;
 
-    private int valor;
+public class Carro {
+    private int identificador;
+    private int objetosCriados = 1;
+    private int velocidade;
 
     public Carro(int velocidade) {
         setVelocidade(velocidade);
+        gerarNumeroIdentificador();
+    }
+    public int gerarNumeroIdentificador(){
+        Random r = new Random();
+        return this.identificador = r.nextInt(10);
+
     }
     public int retornarObjetosCriados(int objetosCriados){
         objetosCriados++;
-        this.valor = objetosCriados;
-
+        this.objetosCriados = objetosCriados;
+        return this.objetosCriados;
     }
 
     public int getObjetosCriados() {
@@ -29,6 +35,6 @@ public class Carro {
 
     @Override
     public String toString() {
-        return "A sua velocidade atual é de: " + this.velocidade + " e seu identificador é: " + this.objetosCriados;
+        return "A sua velocidade atual é de: " + this.velocidade + " e a quantidade total de objetos instanciados é: " + this.objetosCriados + " e seu identificador é: " + this.identificador;
     }
 }
