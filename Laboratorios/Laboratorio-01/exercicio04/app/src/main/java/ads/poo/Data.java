@@ -49,7 +49,9 @@ public class Data {
             return this.resultadoTesteBissesto = true;
         } else{
             return this.resultadoTesteBissesto = false;
+
         }
+
     }
 
     /*
@@ -125,12 +127,27 @@ public class Data {
 
     }
 
-    public int transformarDataEmDias(){
-        return 1;
+    public int retornarDiferencaDeDatas(Data dias){
+        int totalDeDiasLocal = 0;
+        if(resultadoTesteBissesto == true){
+            totalDeDiasLocal = this.dia + maximoDeDiasDoMes + this.ano * 366;
+
+        }else{
+            totalDeDiasLocal = this.dia + maximoDeDiasDoMes + this.ano * 365;
+        }
+
+        int totalDeDiasParametro = 0;
+
+        if(dias.isResultadoTesteBissesto() == true){
+            totalDeDiasParametro = dias.getDia() + dias.getMaximoDeDiasDoMes() +  dias.getAno() * 366;
+        }else{
+            totalDeDiasParametro = dias.getDia() + dias.getMaximoDeDiasDoMes() + dias.getAno() * 365;
+        }
+        return totalDeDiasLocal - totalDeDiasParametro;
     }
-    public int transformarDiasEmData(){
-        return 1;
-    }
+
+
+
     public boolean setDia(int dia) {
         if(!validarDias()){
             return false;
@@ -156,6 +173,26 @@ public class Data {
             this.ano = ano;
             return true;
         }
+    }
+
+    public int getDia() {
+        return dia;
+    }
+
+    public int getMes() {
+        return mes;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public boolean isResultadoTesteBissesto() {
+        return resultadoTesteBissesto;
+    }
+
+    public int getMaximoDeDiasDoMes() {
+        return maximoDeDiasDoMes;
     }
 
     @Override
