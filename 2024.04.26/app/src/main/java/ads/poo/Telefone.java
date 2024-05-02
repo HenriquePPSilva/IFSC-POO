@@ -26,6 +26,22 @@ public class Telefone {
         return resultado;
     }
 
+    public String getRotulo() {
+        return rotulo;
+    }
+
+    public void setRotulo(String rotulo) {
+        this.rotulo = rotulo;
+    }
+
+    public String getValor() {
+        return valor;
+    }
+
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+
     @Override
     public String toString() {
         return formata("(##) ####-####", this.valor) + " - " + this.rotulo;

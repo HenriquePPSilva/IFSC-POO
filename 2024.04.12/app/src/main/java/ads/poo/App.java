@@ -24,7 +24,7 @@ public class App {
     //Editei a matricula para 2023002
     //Fui buscar novamente para editar, mas agora passando 2023002 e ele me retorna que a matricula 2023002 não existe mesmo passando corretamente
     //retorno: 2023001=Aluno{nome='alisson', matricula='2023002', curso='ads', telefone='48998548', email='editei@example.com', dataNascimento=2004-01-01}}
-    
+
     //private ArrayList<Aluno> bancoDeDados;
 
     //Criando um dicionario para melhorar o banco de dados em funcionalidades como: se já tiver a matricula cadastrada de um aluno
