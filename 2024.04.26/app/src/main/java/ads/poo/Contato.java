@@ -54,12 +54,6 @@ public class Contato {
         }
         return false;
     }
-    public String formataData(){
-        // Definindo o formato desejado para a data
-        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        // Formatando o objeto LocalDate como uma string
-        return dataNasc.format(formato);
-    }
 
     public String getNome() {
         return nome;
@@ -74,7 +68,7 @@ public class Contato {
         return "Contato{" +
                 "nome='" + nome + '\'' +
                 ", sobrenome='" + sobrenome + '\'' +
-                ", dataNasc=" + formataData() +
+                ", dataNasc=" + dataNasc +
                 ", telefones=" + telefones +
                 ", emails=" + emails +
                 '}';

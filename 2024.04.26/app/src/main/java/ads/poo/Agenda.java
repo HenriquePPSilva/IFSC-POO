@@ -38,6 +38,10 @@ public class Agenda {
         return c.removeEmail(r);
     }
 
+    public ArrayList<Contato> getContatos() {
+        return contatos;
+    }
+
     @Override
     public String toString() {
         return "Agenda{" +
